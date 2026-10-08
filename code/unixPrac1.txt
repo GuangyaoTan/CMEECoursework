@@ -10,7 +10,6 @@ I used tail -n +2 to display the DNA sequence without the FASTA header. The firs
 
 #3:
 tail -n +2 ../data/fasta/e_coli.fasta | tr -d '\n' | wc -c
-I used tail -n +2 to display the DNA sequence without the FASTA header. The first line contains information about the sequence rather than the DNA bases. The command starts printing from line 2 and continues to the end of the file.
 I used tail to skip the first line because it contains the FASTA header rather than the DNA sequence. Then I used tr to remove the newline characters and wc -c to count the sequence length. The result was 4686137 characters, including ambiguous bases such as N, R, Y, M and W.
 
 #4:
