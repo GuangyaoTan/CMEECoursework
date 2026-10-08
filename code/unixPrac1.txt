@@ -1,0 +1,23 @@
+Bootcamp Assignment 1 - Unix FASTA Practical
+
+#1: 
+wc -l ../data/fasta/*.fasta
+I used the wc -l command to check the three FASTA files. The results were 27, 127 and 78104. This command counts newline characters rather than the actual number of lines. For the first two files, the final line does not end with a newline character, so the counts are one less than the actual number of lines.
+
+#2:
+tail -n +2 ../data/fasta/e_coli.fasta
+I used tail -n +2 to display the DNA sequence without the FASTA header. The first line contains information about the sequence rather than the DNA bases. The command starts printing from line 2 and continues to the end of the file.
+
+#3:
+tail -n +2 ../data/fasta/e_coli.fasta | tr -d '\n' | wc -c
+I used tail -n +2 to display the DNA sequence without the FASTA header. The first line contains information about the sequence rather than the DNA bases. The command starts printing from line 2 and continues to the end of the file.
+I used tail to skip the first line because it contains the FASTA header rather than the DNA sequence. Then I used tr to remove the newline characters and wc -c to count the sequence length. The result was 4686137 characters, including ambiguous bases such as N, R, Y, M and W.
+
+#4:
+tail -n +2 ../data/fasta/e_coli.fasta | tr -d '\n' | grep -o 'ATGC' | wc -l
+I used tail to remove the FASTA header and tr to join the DNA sequence into one line. Then I used grep -o to find every ATGC match and wc -l to count them. The result was 21,968 matches. Removing the line breaks also makes sure that ATGC sequences split across two lines are counted.
+
+
+#5:
+awk -v at="$(tail -n +2 ../data/fasta/e_coli.fasta | tr -cd 'AT' | wc -c)" -v gc="$(tail -n +2 ../data/fasta/e_coli.fasta | tr -cd 'GC' | wc -c)" 'BEGIN {if (gc == 0) print "undefined"; else printf "%.6f\n", at/gc}'
+I used tail to remove the FASTA header, then tr and wc -c to count the AT and GC bases separately. I used awk to divide the AT count by the GC count. The result was 0.969228. Ambiguous bases were not included in the calculation.
