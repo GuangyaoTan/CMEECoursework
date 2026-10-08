@@ -1,0 +1,7 @@
+# Ignore generated results
+results/*
+!results/.gitkeep
+
+# Ignore temporary test files
+sandbox/*
+!sandbox/.gitkeep
