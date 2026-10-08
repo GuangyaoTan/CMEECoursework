@@ -20,4 +20,4 @@ I used tail to remove the FASTA header and tr to join the DNA sequence into one 
 
 #5:
 awk -v at="$(tail -n +2 ../data/fasta/e_coli.fasta | tr -cd 'AT' | wc -c)" -v gc="$(tail -n +2 ../data/fasta/e_coli.fasta | tr -cd 'GC' | wc -c)" 'BEGIN {if (gc == 0) print "undefined"; else printf "%.6f\n", at/gc}'
-I used tail to remove the FASTA header, then tr and wc -c to count the AT and GC bases separately. I used awk to divide the AT count by the GC count. The result was 0.969228. Ambiguous bases were not included in the calculation.
+I used tr and wc -c to count the AT and GC bases separately. I used awk to divide the AT count by the GC count. The result was 0.969228. Ambiguous bases were not included in the calculation.
