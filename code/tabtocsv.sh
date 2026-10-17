@@ -1,10 +1,10 @@
 #!/bin/bash
-# Author: Your name you.login@imperial.ac.uk
+# Author: Guangyao Tan, gt1024@ic.ac.uk
 # Script: tabtocsv.sh
 # Desc: substitute the tabs in the files with commas
 #       saves the output into a .csv file
 # Arguments: 1-> tab delimited file
-# Date: Oct 2015
+# Date: Oct 2026
 if [ ! -f "$1" ]; then
     echo "Error: input file not found" >&2
     exit 1
