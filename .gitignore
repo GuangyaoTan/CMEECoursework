@@ -5,3 +5,13 @@ results/*
 # Ignore temporary test files
 sandbox/*
 !sandbox/.gitkeep
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore VS Code local settings
+.vscode/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
