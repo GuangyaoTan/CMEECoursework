@@ -136,3 +136,37 @@ I used AI tools to help me understand some English assignment instructions, clar
   one. Rows like this are rejected and listed in the issues file.
 - The program reads the whole CSV file into memory, which is fine for this
   small file.
+
+  ## Bootcamp Assignment 3
+
+### Part 1: Tree Heights
+
+This task calculates tree heights using distance and angle measurements from `data/trees.csv`.
+
+Run from the repository root:
+
+`Rscript code/TreeHeight.R`
+
+`Rscript code/get_TreeHeight.R data/trees.csv`
+
+`bash code/run_get_TreeHeight.sh`
+
+The scripts generate `results/TreeHts.csv` and `results/trees_treeheights.csv`. Both outputs contain 120 records and four columns. I checked the first tree's height (27.80 m) and tested the command-line error handling.
+
+### Part 2: Pound Hill Species Richness
+
+This task compares plant species richness among March, May and October cultivation treatments.
+
+Run from the repository root:
+
+`Rscript code/pound_hill_analysis.R`
+
+The script reads `data/pound_hill_data.csv` and `data/pound_hill_meta_data.csv`, without modifying them. Blank species counts are treated as zeros according to the metadata.
+
+Richness is calculated for each quadrat, then averaged within each plot. The analysis includes 41 species, 59 quadrats and 12 plots.
+
+The script generates `results/pound_hill_plot_richness.csv` and `results/pound_hill_plot_richness.pdf`. I checked that the CSV contains 12 plots and the figure shows four plot values per treatment.
+
+May had the highest average richness (9.65 species per quadrat), followed by March (7.81) and October (7.61). The values overlap across treatments, so the figure does not prove that cultivation timing caused these differences.
+
+Generated results are excluded from GitHub because they can be reproduced by running the scripts.
