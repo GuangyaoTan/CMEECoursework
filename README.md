@@ -137,7 +137,7 @@ I used AI tools to help me understand some English assignment instructions, clar
 - The program reads the whole CSV file into memory, which is fine for this
   small file.
 
-  ## Bootcamp Assignment 3
+## Bootcamp Assignment 3
 
 ### Part 1: Tree Heights
 
@@ -170,3 +170,6 @@ The script generates `results/pound_hill_plot_richness.csv` and `results/pound_h
 May had the highest average richness (9.65 species per quadrat), followed by March (7.81) and October (7.61). The values overlap across treatments, so the figure does not prove that cultivation timing caused these differences.
 
 Generated results are excluded from GitHub because they can be reproduced by running the scripts.
+
+### AI use
+I used AI to help understand the assignment instructions, develop and review R code. I ran the scripts on my own computer, checked the results and figure, and reviewed the final work before submission.
