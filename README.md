@@ -266,8 +266,8 @@ Following formative feedback, I improved the Assignment 1 converters and added T
 
 An independent tree-height calculation gave 27.80212 m, matching the CSV. The Pound Hill quadrat richness values 7, 8, 7, 5 and 8 gave a mean of 7.0, also matching the CSV.
 
-Generated results are excluded from Git. A fresh-clone check is required before final submission.
+Generated results are excluded from Git. On 2 November 2026, I cloned the GitHub repository into a separate directory and ran the portfolio checks from the repository root. The Assignment 1–3 programs ran successfully, all 41 Silwood tests passed, and all 12 Python and 11 R practice scripts completed successfully. The Shell scripts passed syntax checks, with functional checks for the main examples. Generated results were ignored by Git, and the source data remained unchanged. Actual TIFF conversion was not tested because ImageMagick was unavailable.
 
 ### AI Use
 
-I used ChatGPT, Claude Code and Codex to understand instructions, generate or revise parts of the code, troubleshoot errors, develop tests and improve documentation. This included practice scripts and formative-feedback revisions. I reviewed and tested the work locally and remain responsible for the final submission.
+I used AI to understand instructions, revise parts of the code, and improve documentation. I reviewed and tested the work locally and remain responsible for the final submission.
